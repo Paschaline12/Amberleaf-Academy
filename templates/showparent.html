@@ -1,0 +1,41 @@
+{% extends 'starter.html' %}
+{% load static %}
+{% block content %}
+<h2 class="text-center text-success">Current Parents</h2>
+<table class="table table-info container">
+    <tr>
+        <th>fullname</th>
+        <th>nameofchild</th>
+        <th>age</th>
+        <th>yob</th>
+        <th>gender</th>
+        <th>phonenumber</th>
+        <th>email</th>
+        <th>photo</th>
+        <th>address</th>
+        <th>occupation</th>
+        <th>Action</th>
+    </tr>
+       
+    {% for x in parent %}
+    <tr>
+        <td>{{ x.fullname }}</td>
+        <td>{{ x.nameofchild }}</td>
+        <td>{{ x.age }}</td>
+        <td>{{ x.yob }}</td>
+        <td>{{ x.gender }}</td>
+        <td>{{ x.phonenumber }}</td>
+        <td>{{ x.email }}</td>
+        <td>{{ x.photo }}</td>
+        <td>{{ x.address }}</td>
+        <td>{{ x.occupation }}</td>
+        <td>
+            <a href="/editparent/{{ x.id }}" class="btn btn-warning">EDIT</a>
+            <a href="/deleteparent/{{ x.id }}" class="btn btn-danger">DELETE</a>
+                </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}

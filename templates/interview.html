@@ -1,0 +1,61 @@
+{% extends 'starter.html' %}
+{% load static %}
+{% block content %}
+<h2 class="text-center text-success">Book your child's interview to the school</h2>
+           
+<form method="POST" action="">
+    {% csrf_token %}
+    <div style="max-width: 600px; margin: auto; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <div style="margin-bottom: 15px;">
+            <label for="name_of_student" style="display: block; font-weight: bold; color: #2a7a2a; margin-bottom: 5px;">Student's Name:</label>
+            <input type="text" id="name_of_student" name="name_of_student" required style="width: 100%; padding: 10px; border-radius: 20px; border: 1px solid #ccc; box-sizing: border-box;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="grade" style="display: block; font-weight: bold; color: #2a7a2a; margin-bottom: 5px;">Grade:</label>
+            <input type="text" id="grade" name="grade" required style="width: 100%; padding: 10px; border-radius: 20px; border: 1px solid #ccc; box-sizing: border-box;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="age" style="display: block; font-weight: bold; color: #2a7a2a; margin-bottom: 5px;">Age:</label>
+            <input type="number" id="age" name="age" required style="width: 100%; padding: 10px; border-radius: 20px; border: 1px solid #ccc; box-sizing: border-box;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="name_of_parent" style="display: block; font-weight: bold; color: #2a7a2a; margin-bottom: 5px;">Parent's Name:</label>
+            <input type="text" id="name_of_parent" name="name_of_parent" required style="width: 100%; padding: 10px; border-radius: 20px; border: 1px solid #ccc; box-sizing: border-box;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="email" style="display: block; font-weight: bold; color: #2a7a2a; margin-bottom: 5px;">Email:</label>
+            <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border-radius: 20px; border: 1px solid #ccc; box-sizing: border-box;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="phone_number" style="display: block; font-weight: bold; color: #2a7a2a; margin-bottom: 5px;">Phone Number:</label>
+            <input type="tel" id="phone_number" name="phone_number" required style="width: 100%; padding: 10px; border-radius: 20px; border: 1px solid #ccc; box-sizing: border-box;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="date_of_interview" style="display: block; font-weight: bold; color: #2a7a2a; margin-bottom: 5px;">Date of Interview:</label>
+            <input type="date" id="date_of_interview" name="date_of_interview" required style="width: 100%; padding: 10px; border-radius: 20px; border: 1px solid #ccc; box-sizing: border-box;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="message" style="display: block; font-weight: bold; color: #2a7a2a; margin-bottom: 5px;">Message:</label>
+            <textarea id="message" name="message" rows="4" cols="50" required style="width: 100%; padding: 10px; border-radius: 20px; border: 1px solid #ccc; box-sizing: border-box;"></textarea>
+        </div>
+
+        <div style="text-align: center;">
+            <button type="submit" style="padding: 10px 20px; background-color: #2a7a2a; color: white; border: none; border-radius: 20px; cursor: pointer;">Submit</button>
+        </div>
+    </div>
+</form>
+
+<style>
+    input:hover, textarea:hover, button:hover {
+        border-color: #2a7a2a;
+        background-color: #e6ffe6;
+    }
+</style>
+{% endblock %}

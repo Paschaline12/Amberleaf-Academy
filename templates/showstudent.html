@@ -1,0 +1,43 @@
+{% extends 'starter.html' %}
+{% load static %}
+{% block content %}
+<h2 class="text-center text-success">Students</h2>
+<table class="table table-info container">
+    <tr>
+        <th>fullname</th>
+        <th>nameofparent</th>
+        <th>admissionno</th>
+        <th>photo</th>
+        <th>gradelevel</th>
+        <th>age</th>
+        <th>yob</th>
+        <th>gender</th>
+        <th>Address</th>
+        <th>joindate</th>
+        <th>Action</th>
+    </tr>
+    {% for x in student %}
+    <tr>
+        <td>{{ x.fullname }}</td>
+        <td>{{ x.nameofparent }}</td>
+        <td>{{ x.admissionno }}</td>
+        <td>{{ x.photo }}</td>
+        <td>{{ x.gradelevel }}</td>
+        <td>{{ x.age }}</td>
+        <td>{{ x.yob }}</td>
+        <td>{{ x.gender }}</td>
+        <td>{{ x.Address }}</td>
+        <td>{{ x.joindate }}</td>
+        <td>{{ x.Action }}</td>
+        
+        <td>
+            <a href="/editstudent/{{ x.id }}" class="btn btn-warning">EDIT</a>
+            <a href="/deletestudent/{{ x.id }}" class="btn btn-danger">DELETE</a>
+            
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'starter.html' %}
+{% load static %}
+{% block content %}
+
+<section id="about" class="about section">
+
+    
+    <div class="container section-title" data-aos="fade-up">
+      
+      <p>Children nolonger need to be in school. we offer the services of distance learning in our school:  Please enroll by book an interview with us. </p>
+    </div>
+
+    <div class="container">
+
+      <div class="row gy-4">
+        <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="100">
+          <img src="{% static 'IMG/distancelearning.webp' %}" class="img-fluid" alt="">
+          <a href="{% url 'interview' %}">Please get started in our distance learning curiculum here. </a>
+        </div>
+        <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
+          <h3>We need your child to attend digital school with us.</h3>
+          <p class="fst-italic">
+            .Enrolling in Amberleaf Academy Digital School offers students a world-class, flexible, and future-ready education tailored to meet the demands of the digital age. The academy provides a robust online learning platform with interactive lessons, engaging multimedia content, and access to expert tutors, ensuring students receive high-quality instruction from the comfort of their homes.
+
+            Amberleaf Academy Digital School fosters personalized learning, allowing students to progress at their own pace while receiving individual attention. Its curriculum is diverse and innovative, integrating technology skills, critical thinking, and real-world problem-solving to prepare students for future careers.
+            
+            With advanced tools like virtual labs, digital whiteboards, and collaborative online spaces, students experience hands-on learning in a modern setting. The academy also promotes a strong sense of community through virtual clubs, group discussions, and extracurricular activities. By enrolling, families gain convenience, flexibility, and the assurance of academic excellence, shaping students into confident, tech-savvy global citizens.
+          </p>
+          <ul>
+            <li><i class="bi bi-check2-all"></i> <span>Digital schoools enhances Skill Development for the Digital Age.</span></li>
+            <li><i class="bi bi-check2-all"></i> <span>While learning digitally a learner can Access to Diverse Resources online.</span></li>
+            <li><i class="bi bi-check2-all"></i> <span>Digital learning offers flexibility and Convenience when learning</span></li>
+          </ul>
+          <p>
+            As a parent you have all the reasons to get started and enroll with us at <a href="{% url 'interview' %}">Get started with us</a>          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+{% endblock %}

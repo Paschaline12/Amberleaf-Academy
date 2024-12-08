@@ -1,0 +1,113 @@
+{% extends 'starter.html' %}
+{% load static %}
+{% block content %}
+
+
+<section id="courses" class="courses section">
+
+    
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Extra curicular Courses</h2>
+      <p>The following courses are optional and require a registration prior to enrolment.</p>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <div class="course-item">
+            <img src="{% static 'IMG/swimming.webp' %} " class="img-fluid" alt="...">
+            <div class="course-content">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <a href="{% url 'swimbooking' %}" class="btn btn-success">Book swimming classes</a>
+
+                <p class="price">Kshs, 12,000.00</p>
+              </div>
+
+              <p class="description">Swimming is a fantastic activity that offers numerous physical, mental, and social benefits. It provides a full-body workout, improving cardiovascular health, muscle strength, and flexibility while being gentle on the joints. As a low-impact exercise, it suits people of all ages and fitness levels.
+
+                Beyond physical health, swimming enhances mental well-being by reducing stress and promoting relaxation. It builds endurance, boosts confidence, and fosters discipline.
+                
+                In a group setting, swimming encourages teamwork, social interaction, and camaraderie. Learning to swim also equips individuals with a vital life-saving skill, ensuring safety around water and empowering them to enjoy aquatic environments confidently.</p>
+              <div class="trainer d-flex justify-content-between align-items-center">
+                <div class="trainer-profile d-flex align-items-center">
+                  <img src="assets/img/trainers/trainer-1-2.jpg" class="img-fluid" alt="">
+                  <a href="" class="trainer-link">Antonio</a>
+                </div>
+                <div class="trainer-rank d-flex align-items-center">
+                  <i class="bi bi-person user-icon"></i>&nbsp;50
+                  &nbsp;&nbsp;
+                  <i class="bi bi-heart heart-icon"></i>&nbsp;65
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+          <div class="course-item">
+            <img src="{% static 'IMG/skating.webp' %}" class="img-fluid" alt="...">
+            <div class="course-content">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <a href="{% url 'skatebooking' %}" class="btn btn-success">Book skating classes</a>
+
+                <p class="price">Kshs 12,000.00</p>
+              </div>
+
+            
+              <p class="description">Skating lessons at Amberleaf Academy offer your child a unique opportunity to develop essential life skills while having fun. Skating enhances physical fitness by improving balance, coordination, and strength, all in an enjoyable and engaging way.
+
+                Beyond physical benefits, skating builds self-confidence as children master new techniques and overcome challenges. It also fosters social interaction, helping kids develop teamwork and friendships in a supportive environment.
+                
+                Our experienced instructors ensure safety and personalized attention, creating a positive learning experience. Give your child the chance to thrive, stay active, and develop lifelong skills through our exciting skating program!
+            </p>
+              <div class="trainer d-flex justify-content-between align-items-center">
+                <div class="trainer-profile d-flex align-items-center">
+                  <img src="" class="img-fluid" alt="">
+                  <a href="" class="trainer-link">Lana</a>
+                </div>
+                <div class="trainer-rank d-flex align-items-center">
+                  <i class="bi bi-person user-icon"></i>&nbsp;35
+                  &nbsp;&nbsp;
+                  <i class="bi bi-heart heart-icon"></i>&nbsp;42
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+          <div class="course-item">
+            <img src="{% static 'IMG/yoga.webp' %}" class="img-fluid" alt="...">
+            <div class="course-content">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <a href="{% url 'yogabooking' %}" class="btn btn-success">Book Yoga classes</a>
+
+                <p class="price">Kshs 12,000.00</p>
+              </div>
+
+              <p class="description">Yoga classes provide a perfect blend of physical fitness, mental relaxation, and emotional well-being. Through stretches, poses, and breathing exercises, yoga improves flexibility, strength, and balance. It also helps reduce stress, enhance focus, and promote mindfulness, making it a holistic practice for all ages.
+
+                Yoga instills discipline and encourages healthy habits, fostering resilience and inner peace. Group classes create a supportive environment where participants can connect and grow together. At Amberleaf Academy, our yoga classes are tailored to suit every student’s needs, ensuring they enjoy a positive, rejuvenating experience while building a strong foundation for lifelong wellness..</p>
+              <div class="trainer d-flex justify-content-between align-items-center">
+                <div class="trainer-profile d-flex align-items-center">
+                  <img src="assets/img/trainers/trainer-3-2.jpg" class="img-fluid" alt="">
+                  <a href="" class="trainer-link">Brandon</a>
+                </div>
+                <div class="trainer-rank d-flex align-items-center">
+                  <i class="bi bi-person user-icon"></i>&nbsp;20
+                  &nbsp;&nbsp;
+                  <i class="bi bi-heart heart-icon"></i>&nbsp;85
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+
+      </div>
+
+    </div>
+
+  </section>
+{% endblock %}

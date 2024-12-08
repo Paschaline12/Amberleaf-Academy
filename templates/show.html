@@ -1,0 +1,71 @@
+{% extends 'starter.html' %}
+{% load static %}
+{% block content %}
+<h1 class="container text-center text-succes">This is our authorized users page. </h1>
+<h3 class="container">Here you can perform an action on the following:</h3>
+<div class="container">
+    <div class="row justify-content-center">
+        <div>
+            <h4>Interviews:</h4>
+            <a href="{% url 'showinterview' %}">1.Show Existing Interviews</a><br>
+            <a href="{% url 'interview' %}">2.Add or book an interview</a>
+        </div>
+        <div>
+            <h4>Students</h4>
+            <a href="{% url 'showstudent' %}">1.Show all existing students</a><br>
+            <a href="{% url 'addstudent' %}">2.Add a new student</a>
+        </div>
+        <div>
+            <h4>Parents:</h4>
+            <a href="{% url 'showparent' %}">1.Show existing parents</a><br>
+            <a href="{% url 'addparent' %}">2. Add a new parent</a>
+        </div>
+        <div>
+            <h4>Contact Messages from the site:</h4>
+            <a href="{% url 'showmessage' %}">1.Show Messages from the site users</a>
+        </div>
+        <div>
+            <h4>Teachers:</h4>
+            <a href="{% url 'showteacher' %}">1.Show existing teachers</a><br>
+            <a href="{% url 'addteacher' %}">2.Add a new teacher</a>
+        </div>
+    </div>
+    <div>
+        <h4>Swim Booking:</h4>
+        <a href="{% url 'showswimbooking' %}">1.Show existing Swim booking</a><br>
+        <a href="{% url 'swimbooking' %}">2.Add a new Swim booking</a>
+    </div>
+    <div>
+        <h4> Skate Booking:</h4>
+        <a href="{% url 'showskatebooking' %}">1.Show existing Skate booking</a><br>
+        <a href="{% url 'skatebooking' %}">2.Add a new Skate booking</a>
+    </div>
+    <div>
+        <h4>Transport Booking:</h4>
+        <a href="{% url 'showtransportbooking' %}">1.Show existing transport booking</a><br>
+        <a href="{% url 'transportbooking' %}">2.Add a new transport booking</a>
+    </div>
+    <div>
+        <h4>Yoga Booking:</h4>
+        <a href="{% url 'showyogabooking' %}">1.Show existing Yoga booking</a><br>
+        <a href="{% url 'yogabooking' %}">2.Add a new Yoga booking</a>
+    </div>
+    <div>
+        <h4>Non Teaching Staff:</h4>
+        <a href="{% url 'shownonteachingstaff' %}">1.Show existing None Teaching</a><br>
+        <a href="{% url 'addnonteachingstaff' %}">2.Add a New None Teaching Staff Member</a>
+    </div>
+    <div>
+        <h4>Show Authorized Members</h4>
+        <a href="{% url 'showmember' %}">1.Show all existing Authorized Members</a><br>
+        <a href="{% url 'addnewmember' %}">2.Add a new Authorized Member</a>
+    </div>
+    <div>
+        <h4>Upload Images(Director)</h4>
+        
+        <a href="{% url 'uploaddirectorimage' %}">1. Upload Images to the front end:</a><br>
+        <a href="{% url 'showdirectorimage' %}">2.Show Images Uploaded to the front end:</a>
+    </div>
+</div>
+
+{% endblock %}

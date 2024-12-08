@@ -1,0 +1,94 @@
+{% extends 'starter.html' %}
+{% load static %}
+{% block content %}
+<h1 class="text-center text-success">Edit Transport Booking Details</h1>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        text-align: center;
+        color: #2a7a2a;
+    }
+
+    form {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #2a7a2a;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    input[type="time"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #2a7a2a;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #249424;
+    }
+
+    input:focus {
+        border-color: #2a7a2a;
+        outline: none;
+    }
+</style>
+
+<body>
+    <form method="POST" action="/updatetransport/{{ edittransportbooking1.id }}">
+    {% csrf_token %}
+    <label for="student_name">Name of Student:</label>
+    <input type="text" value="{{ edittransportbooking1.student_name }}" id="student_name" name="student_name" required>
+
+    <label for="grade">Grade:</label>
+    <input type="text" value="{{ edittransportbooking1.grade }}" id="grade" name="grade" required>
+
+    <label for="address">Address:</label>
+    <input type="text" value="{{ edittransportbooking1.address }}" id="address" name="address" required>
+
+    <label for="parent_phone">Parent's Phone Number:</label>
+    <input type="text" value="{{ edittransportbooking1.parent_phone }}" id="parent_phone" name="parent_phone" required>
+
+    <label for="pickup_time">Time of Pickup:</label>
+    <input type="time" value="{{ edittransportbooking1.pickup_time }}" id="pickup_time" name="pickup_time" required>
+
+    <button type="submit">Submit Booking</button>
+</form>
+</body>
+
+
+
+
+{% endblock %}

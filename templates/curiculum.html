@@ -1,0 +1,19 @@
+{% extends 'starter.html' %}
+{% load static %}
+{% block content %}
+
+
+<section id="hero" class="hero section dark-background">
+
+    <img src="{% static 'IMG/curiculum.webp' %}" alt="" data-aos="fade-in">
+
+    <div class="container">
+      <h2 data-aos="fade-up" data-aos-delay="100">We offer the CBC curiculum according to the requirements of the Kenyan Governem<br>Enroll your child today and leave the rest to us!</h2>
+      <p data-aos="fade-up" data-aos-delay="200">Amberleaf Academy stands out by offering the best Competency-Based Curriculum (CBC) in strict adherence to Kenyan laws. The school ensures a learner-centered approach that nurtures skills, creativity, and critical thinking. With modern facilities and experienced teachers, Amberleaf provides a holistic education, empowering students for future success in Kenya and beyond.</p>
+      <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
+        <a href="{% url 'interview' %}" class="btn-get-started">Get Started</a>
+      </div>
+    </div>
+
+  </section>
+{% endblock %}

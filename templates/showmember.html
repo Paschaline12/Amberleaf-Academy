@@ -1,0 +1,28 @@
+{% extends 'starter.html' %}
+{% load static %}
+{% block content %}
+<h2 class="text-center text-success">Authorized Password Members</h2>
+<table class="table table-info container">
+    <tr>
+        <th>fullname</th>
+        <th>username</th>
+        <th>email</th>
+        <th>password</th>
+        <th>Action</th>
+    </tr>
+    {% for x in member %}
+    <tr>
+        <td>{{ x.fullname }}</td>
+        <td>{{ x.username }}</td>
+        <td>{{ x.email }}</td>
+        <td>{{ x.password}}</td>
+        <td>
+            <a href="/editmember/{{ x.id }}" class="btn btn-warning">EDIT</a>
+            <a href="/deletemember/{{ x.id }}" class="btn btn-danger">DELETE</a>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}

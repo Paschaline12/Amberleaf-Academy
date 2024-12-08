@@ -1,0 +1,138 @@
+{% extends 'starter.html' %}
+{% load static %}
+{% block content %}
+<h1 class="text-center text-success">Edit Non Teaching staff details</h1>
+
+
+
+<style>
+    #nonteachingForm {
+        width: 100%;
+        max-width: 600px;
+        margin: 20px auto;
+        font-family: Arial, sans-serif;
+    }
+    
+    .input-group {
+        margin-bottom: 15px;
+    }
+    
+    label {
+        display: block;
+        font-weight: bold;
+        color: green;
+        margin-bottom: 5px;
+    }
+    
+    input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px; /* Round edges */
+        background-color: #dfffdf; /* Light green */
+    }
+    
+    textarea {
+        resize: vertical;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+        border-color: green;
+        outline: none;
+        background-color: #e8ffe8;
+    }
+    
+    .submit-btn {
+        display: block;
+        width: 100%;
+        padding: 10px 20px;
+        color: white;
+        background-color: green;
+        border: none;
+        border-radius: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .submit-btn:hover {
+        background-color: lightgreen;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: green;
+        text-align: center;
+    }
+    
+    </style>
+    
+    
+    <form method="POST" id="nonteachingForm" action="/updatenonteaching/{{ editnonteaching1.id }}">
+        {% csrf_token %}
+    
+        <div class="input-group">
+            <label for="fullname">Full Name:</label>
+            <input type="text" value="{{ editnonteaching1.fullname }}" id="fullname" name="fullname" maxlength="200" required>
+        </div>
+    
+        <div class="input-group">
+            <label for="age">Age:</label>
+            <input type="number" value="{{ editnonteaching1.age }}" id="age" name="age" required>
+        </div>
+    
+        <div class="input-group">
+            <label for="yob">Year of Birth (YOB):</label>
+            <input type="date" value="{{ editnonteaching1.yob }}" id="yob" name="yob" required>
+        </div>
+    
+        <div class="input-group">
+            <label for="payrollNo">Payroll Number:</label>
+            <input type="text" value="{{ editnonteaching1.payrollNo }}" id="payrollNo" name="payrollNo" maxlength="15" required>
+        </div>
+    
+        <div class="input-group">
+            <label for="hireDate">Hire Date:</label>
+            <input type="text" value="{{ editnonteaching1.hireDate }}" id="hireDate" name="hireDate" maxlength="15" placeholder="DD/MM/YYYY" required>
+        </div>
+    
+        <div class="input-group">
+            <label for="photo">Photo:</label>
+            <input type="file" value="{{ editnonteaching1.photo }}" id="photo" name="photo" accept="image/*" required>
+        </div>
+    
+        
+        <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="email" value="{{ editnonteaching1.email }}" id="email" name="email" required>
+        </div>
+    
+        <div class="input-group">
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="text" value="{{ editnonteaching1.phoneNumber }}" id="phoneNumber" name="phoneNumber" maxlength="20" required>
+        </div>
+    
+        <div class="input-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+    
+        <div class="input-group">
+            <label for="address">Address:</label>
+            <input type="text" value="{{ editnonteaching1.address }}" id="address" name="address" maxlength="50" required>
+        </div>
+    
+        <div class="input-group">
+            <label for="salary">Salary:</label>
+            <input type="number" value="{{ editnonteaching1.salary }}" id="salary" name="salary" step="0.01" required>
+        </div>
+    
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+
+
+{% endblock %}

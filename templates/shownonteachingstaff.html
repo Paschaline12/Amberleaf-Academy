@@ -1,0 +1,49 @@
+{% extends 'starter.html' %}
+{% load static %}
+{% block content %}
+<h2 class="text-center text-success">All Non Teaching Staff</h2>
+<table class="table table-info container" >
+    <tr>
+        <th>fullname </th>
+        <th>age</th>
+        <th>yob</th>
+        <th>payrollNo</th>
+        <th>hireDate</th>
+        <th>photo</th>
+        <th>email</th>
+        <th>phoneNumber</th>
+        <th>gender</th>
+        <th>Address</th>
+        <th>salary</th>
+        <th>Action</th>
+    </tr>
+    
+      
+    {% for x in noneteaching %}
+    <tr>
+        <td>{{ x.fullname  }}</td>
+        <td>{{ x.age }}</td>
+        <td>{{ x.yob }}</td>
+        <td>{{ x.payrollNo }}</td>
+        <td>{{ x.hireDate }}</td>
+        <td>{{ x.photo }}</td>
+        <td>{{ x.email }}</td>
+        <td>{{ x.phoneNumber }}</td>
+        <td>{{ x.gender }}</td>
+        <td>{{ x.Address }}</td>
+        <td>{{ x.salary }}</td>
+        
+
+        <td>
+            <a href="/editnonteachingstaff/{{ x.id }}" class="btn btn-warning">EDIT</a>
+            <a href="/deletenonteachingstaff/{{ x.id }}" class="btn btn-danger">DELETE</a>
+        </tr>
+    {% endfor %}
+
+</table>
+<style>
+    .table tr:hover {
+        background-color: #d4edda; 
+</style>
+
+{% endblock %}

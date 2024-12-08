@@ -1,0 +1,37 @@
+{% extends 'starter.html' %}
+{% load static %}
+{% block content %}
+<h2 class="text-center text-success">Interviews</h2>
+<table class="table table-info container">
+    <tr>
+        <th>name_of_student</th>
+        <th>grade</th>
+        <th>age</th>
+        <th>name_of_parent</th>
+        <th>email</th>
+        <th>phone_number</th>
+        <th>date_of_interview</th>
+        <th>message</th>
+        <th>Action</th>
+    </tr>
+    {% for x in interview %}
+    <tr>
+        <td>{{ x.name_of_student }}</td>
+        <td>{{ x.grade }}</td>
+        <td>{{ x.age }}</td>
+        <td>{{ x.name_of_parent }}</td>
+        <td>{{ x.email }}</td>
+        <td>{{ x.phone_number }}</td>
+        <td>{{ x.date_of_interview }}</td>
+        <td>{{ x.message }}</td>
+        <td>
+            <a href="/editinterview/{{ x.id }}" class="btn btn-warning">EDIT</a>
+            <a href="/deleteinterview/{{ x.id }}" class="btn btn-danger">DELETE</a>
+            <a href="" class="btn btn-success">pay</a>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}

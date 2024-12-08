@@ -1,0 +1,82 @@
+{% extends 'starter.html' %}
+{% load static %}
+{% block content %}
+<h1 class="text-center text-success">Edit Yoga Booking Details</h1>
+
+<style>
+    .form-container {
+        background-color: #ffffff;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 50%; 
+        margin: auto; 
+    }
+
+    h2 {
+        color: #2f855a;
+        margin-bottom: 1.5rem;
+    }
+
+    .input-group label {
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        color: #555555;
+    }
+
+    .input-group input,
+    .input-group select {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid #c6f6d5;
+        border-radius: 20px;
+        background-color: #f0fff4;
+        outline: none;
+    }
+
+    .submit-button {
+        background-color: #38a169;
+        color: white;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .submit-button:hover {
+        background-color: #2f855a;
+    }
+</style>
+
+<body class="bg-light d-flex justify-content-center align-items-center vh-100">
+
+<div class="form-container text-center">
+    
+    <form method="POST" action="/updateyogabooking/{{ edityogabooking1.id }}">
+        {% csrf_token %}
+        <div class="mb-3 text-start">
+            <label for="name" class="form-label">Name Of Student</label>
+            <input type="text" value="{{ edityogabooking1.name }}" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+        </div>
+        <div class="mb-3 text-start">
+            <label for="grade" class="form-label">Grade</label>
+            <input type="text" value="{{ edityogabooking1.grade }}" id="grade" name="grade" class="form-control" placeholder="Enter the student's grade" required>
+        </div>
+        <div class="mb-3 text-start">
+            <label for="gender" class="form-label">Gender</label>
+            <select id="gender" name="gender" class="form-select" required>
+                <option value="" disabled selected>Select the student's gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <button type="submit" class="btn submit-button">Submit</button>
+    </form>
+</div>
+
+</body>
+
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'starter.html' %}
+{% load static %}
+{% block content %}
+<h2 class="text-center">Uploaded Images</h2>
+
+<div class="container">
+   <div style="display: flex;
+   justify-content:space-between;
+   flex-wrap: wrap">
+        {% for image in images %}
+       <div class="col mb-2">
+         <img src="{{ image.image.url }}" alt="Director Image">
+           <p><strong>Title :</strong>{{ image.title }}</p>
+           <p><strong> Narration:</strong>{{ image.narration }}</p>
+
+           <a href="/imagedirectordelete/{{ image.id }}" class="btn btn-outline-danger">DELETE</a>
+           
+       </div>
+    {% endfor %}
+   </div>
+
+</div>
+
+
+{% endblock %}

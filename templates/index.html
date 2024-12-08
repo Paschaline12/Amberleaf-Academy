@@ -1,0 +1,55 @@
+{% extends 'starter.html' %}
+{% load static %}
+{% block content %}
+ <!-- Events Section -->
+ <section id="events" class="events section">
+
+    <div class="container" data-aos="fade-up">
+
+      <div class="row">
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="card">
+            <div class="card-img">
+              <img src="{% static 'IMG/logo.webp' %}" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><a href="">Our School</a></h5>
+              <p class="fst-italic text-center">Our doors are open to our parents and students any time </p>
+              <p class="card-text"> 
+
+                At Amberleaf Academy, we are committed to providing an exceptional educational experience that inspires and empowers every student. Our comprehensive curriculum blends academics, arts, sports, and technology to nurture well-rounded individuals equipped to thrive in an ever-changing world.  
+                
+                We take pride in fostering a supportive and inclusive community where every child’s potential is recognized and developed. Through innovative teaching methods, dedicated educators, and state-of-the-art resources, we ensure that students receive a dynamic and engaging education. Our emphasis on critical thinking, creativity, and global awareness prepares them to excel in academics and life.  
+                
+                Our doors are always open to parents and students, reflecting our commitment to transparency, collaboration, and shared growth. We believe in creating a strong partnership with families to support each child's journey toward success.  
+                
+                Join Amberleaf Academy, where excellence, opportunity, and community come together to shape future leaders.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="card">
+            <div class="card-img">
+              <img src="{% static 'IMG/playground.webp' %}" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><a href="">Play time for our kids</a></h5>
+              <p class="fst-italic text-center">We take games and relaxing time seriously: </p>
+              <p class="card-text">At Amberleaf Academy, we take games and relaxing time seriously because we believe that a balanced approach to learning is essential for the development of well-rounded individuals. Playtime is not just a break from academics; it is a critical part of our educational philosophy. During this time, students are encouraged to engage in activities that foster creativity, teamwork, and physical fitness. Whether it's outdoor sports, group games, or individual leisure activities, these moments help children develop important social skills and improve their mental well-being. Our school provides a variety of options for students to unwind, from structured games to free play, ensuring that everyone can find something that suits their interests. We understand that relaxation and play are not only fun but essential for cognitive development and emotional growth. At Amberleaf Academy, we aim to create a nurturing environment where learning and play coexist harmoniously.</p>
+           <br><br>
+           <h1>More activites can be found at:  </h1>
+           <a href="{% url 'curiculum' %}">Extra curiculum activities</a>
+           <p>You can invest on the extra curiculum activities for your child</p>
+           <a href="{% url 'curiculum' %}">See more of this activities</a>
+
+              </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section><!-- /Events Section -->
+
+{% endblock %}

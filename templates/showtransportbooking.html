@@ -1,0 +1,29 @@
+{% extends 'starter.html' %}
+{% load static %}
+{% block content %}
+<h2 class="text-center text-success">Transport Bookings</h2>
+<table class="table table-info container">
+    <tr>
+        <th>student_name</th>
+        <th>grade</th>
+        <th>address</th>
+        <th>parent_phone</th>
+        <th>pickup_time</th>
+        <th>Action</th>
+    </tr>
+    {% for x in transportbooking %}
+    <tr>
+        <td>{{ x.student_name }}</td>
+        <td>{{ x.grade }}</td>
+        <td>{{ x.address }}</td>
+        <td>{{ x.pickup_time }}</td>
+        <td>
+            <a href="/edittransportbooking/{{ x.id }}" class="btn btn-warning">EDIT</a>
+            <a href="/deletetransportbooking/{{ x.id }}" class="btn btn-danger">DELETE</a>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}

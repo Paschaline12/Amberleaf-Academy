@@ -1,0 +1,108 @@
+{% extends 'starter.html' %}
+{% load static %}
+{% block content %}
+<h1 class="text-center text-success">Our Galery</h1>
+
+
+<body>
+
+<div class="gallery">
+    {% load static %}
+    <style>
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Page Heading */
+        h1 {
+            text-align: center;
+            color: #333;
+            margin: 20px 0;
+            font-size: 2.5rem;
+        }
+
+        /* Gallery Container */
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px auto;
+            padding: 0;
+            max-width: 900px;
+        }
+
+        /* Image Styling */
+        .gallery img {
+            width: 90%; /* Makes it responsive */
+            max-width: 700px;
+            margin: 10px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        /* Hover Effect */
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Caption Styling (Optional) */
+        .caption {
+            text-align: center;
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Amberleaf Academy Gallery</h1>
+    <div class="gallery">
+        <div>
+            <img src="{% static 'IMG/complab.webp' %}" alt="Computer Lab">
+            <p class="caption">Computer Lab</p>
+        </div>
+        <div>
+            <img src="{% static 'IMG/playground.webp' %}" alt="Playground">
+            <p class="caption">Playground</p>
+        </div>
+        <div>
+            <img src="{% static 'IMG/dining.webp' %}" alt="Dining Hall">
+            <p class="caption">Dining Hall</p>
+        </div>
+        <div>
+            <img src="{% static 'IMG/distancelearning.webp' %}" alt="Distance Learning">
+            <p class="caption">Distance Learning</p>
+        </div>
+        <div>
+            <img src="{% static 'IMG/library.webp' %}" alt="Library">
+            <p class="caption">Library</p>
+        </div>
+        <div>
+            <img src="{% static 'IMG/logo.webp' %}" alt="School Logo">
+            <p class="caption">School Logo</p>
+        </div>
+        <div>
+            <img src="{% static 'IMG/skating.webp' %}" alt="Skating">
+            <p class="caption">Skating</p>
+        </div>
+        <div>
+            <img src="{% static 'IMG/swimming.webp' %}" alt="Swimming Pool">
+            <p class="caption">Swimming Pool</p>
+        </div>
+        <div>
+            <img src="{% static 'IMG/yoga.webp' %}" alt="Yoga Class">
+            <p class="caption">Yoga Class</p>
+        </div>
+        <div>
+            <img src="{% static 'IMG/buses.webp' %}" alt="School Buses">
+            <p class="caption">School Buses</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
